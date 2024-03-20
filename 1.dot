@@ -1,0 +1,20 @@
+graph robotFramework {
+    fontname = "Helvetica,Arial,sans-serif";
+    node [fontname = "Helvetica,Arial,sans-serif";];
+    edge [fontname = "Helvetica,Ariasans-serif";];
+    node [shape = circle;];
+    q3 [peripheries = 2;];
+    
+    start -- q1 [dir = forward;];
+    q1 -- q2 [label = "0"; dir = forward;];
+    q1 -- q1 [label = "1"; dir = forward;];
+    q2 -- q1 [label = "1"; dir = forward;];
+    q2 -- q3 [label = "0"; dir = forward;];
+    q3 -- q1 [label = "1"; dir = forward;];
+    q3 -- q3 [label = "0"; dir = forward;];
+    
+    
+    
+    
+    fontsize = 20;
+}
