@@ -1,7 +1,9 @@
 #import "@preview/finite:0.3.0": automaton, layout
 
 #let q2 = [
-2. Convert the `DFA`s to a `regex`: 
+== 2. Convert the `DFA`s to a `regex`: 
+
+  === (a) 
   #automaton(
     (
       q0: (q0:"a", q1:"b"),
@@ -35,8 +37,31 @@
       )
     )
   )
-  1. $a^ast (b^+ a^+ b)^ast a^ast$
+  
+  ==== step1
+    $q_0=q_0a union q_2b union epsilon.alt$
 
+    $q_1=q_0 b union q_1b = q_0 b b^* = q_0 b^+$
+
+    $q_2=q_1 a union q_2a =q_1 a a^* =q_1 a^+$
+
+  ==== step2
+    $q_0=(q_2 b union epsilon.alt )a^*$
+
+    $=(q_1 a^+ b union epsilon.alt )a^* $
+
+    $=(q_0 b^+ a^+ b union epsilon.alt )a^* $
+
+    $=q_0 b^+ a^+ b a^* union epsilon.alt a^* $
+
+    $= a^* + q_0 b^+a^+ b a^*$
+
+    $= a^*(b^+ a^+ b a^*)^*$
+
+  ==== accept: $ a^*(b^+ a^+ b a^*)^*$
+
+
+  === (b)
   #automaton(
     (
       q0: (q1:"a,b"),
@@ -71,10 +96,37 @@
       )
     )
   )
-  2.  $q_0 = ((a union b)(a union bb)^* b a)^* $
 
-    $q_2 = ((a union b)(a union bb)^* b a)^* (a union b)(a union bb)^* b$
+  ==== step1
+    $q_0=  epsilon.alt union q_2 a$
 
-  = TODO
+    $q_1=  q_0(a union b) union q_1 a union q_2 b$
+
+    $q_2 = q_1 b$
+  
+  ==== step2
+    $q_1 = q_0(a union b) union q_1 a union q_2 b$
+
+    $= q_0 (a union b) union q_1 a union q_1 b b$
+
+    $= q_0(a union b) union q_1(a union bb)$
+    
+    $= q_0(a union b)(a union bb)^*$
+
+    $q_2 = q_0(a union b)(a union bb)^*b $
+
+    $q_0&= epsilon.alt union q_0(a union b)(a union bb)^*b a $
+
+    $&= epsilon.alt ((a union b)(a union bb)^* b a)^* $
+    $&= ((a union b)(a union bb)^* b a)^* $
+
+  ==== step3
+    $q_0 = epsilon.alt union ((a union b)(a union b b)^* b a)^* $
+
+    $q_2 = ((a union b)(a union b b)^* b a)^* (a union b)(a union b b)^* b$
+
+  ==== accept:
+    $q_0 union q_2 = epsilon.alt union ((a union b)(a union b b)^* b )^* (epsilon 
+    union (a union b)(a union b b)^* b)$
 ]
 #q2
