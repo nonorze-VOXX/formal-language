@@ -20,3 +20,5 @@
 
   + Prove that $L(M_r) = L(M)$. A `DFA` is called _reachable_ or _trim_ if $M = M_r$.
 ]
+
+#q8

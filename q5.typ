@@ -4,4 +4,6 @@
   $ mono("MIN")(L) := {w in L | "no proper prefix of" w "belongs to" L}. $
 
   Prove that if $L$ is regular, then $mono("MIN")(L)$ is regular as well.
+  = todo
 ]
+#q5

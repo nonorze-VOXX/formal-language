@@ -15,9 +15,9 @@
 #show: project.with(
   title: "Formal Language Homework",
   authors: (
-      "資工三 110590003 黃政",
+      "資工三 110590002 王熯竑",
   ),
-  date: "March 11, 2024",
+  date: "April 08, 2024",
 )
 
 #q1

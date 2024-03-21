@@ -43,3 +43,5 @@
 
   + Prove that $L(N_1) = L(N_2)$ iff there is some _g_-bisimulation between $N_1$ and $N_2$.
 ]
+
+#q11

@@ -71,6 +71,10 @@
       )
     )
   )
-  2. $epsilon.alt | ((a | b) a^ast b ((b a b)^ast | a))^ast$
+  2.  $q_0 = ((a union b)(a union bb)^* b a)^* $
+
+    $q_2 = ((a union b)(a union bb)^* b a)^* (a union b)(a union bb)^* b$
+
   = TODO
 ]
+#q2

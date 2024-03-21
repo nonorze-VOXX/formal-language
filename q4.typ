@@ -3,7 +3,7 @@
 
   + ${w | w "contains with at least three 1s"}$.
 
-    $Sigma^ast (1 Sigma^ast)^3$
+= todo
 
   + ${w | w "contains exactly two 0s and at least two 1s"}$.
 
@@ -11,5 +11,7 @@
 
   + ${w | "every odd position in" w "is 1"}$.
 
-    $(10 union 11)^ast (1 union epsilon.alt)$
+= todo
+
 ]
+#q4

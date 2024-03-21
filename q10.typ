@@ -16,3 +16,5 @@
 
   + Prove that if $h : M_1 -> M_2$ is a proper homomorphism, then $L(M_1) = L(M_2)$.
 ]
+
+#q10
