@@ -4,7 +4,7 @@ graph robotFramework {
     node [fontname = "Helvetica,Arial,sans-serif";];
     edge [fontname = "Helvetica,Ariasans-serif"; dir = forward;];
     node [shape = circle;];
-    // q3 [peripheries = 2;];
+    q2 [peripheries = 2;];
     
     start -- q0 [dir = forward;];
     q0 -- q1 [label = "1";];
