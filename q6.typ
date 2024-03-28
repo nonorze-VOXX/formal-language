@@ -78,9 +78,10 @@
     therefore $L^3$ is regular.
 
   + Let $k in NN$. Prove that there are only finitely many languages of the form $L^((1/k))$ and that they are all regular.
-    $L^(1/k) = {w| w^k in L}$
 
-    Let $w$ =只有在DFA裡經過n次循環的word
+    $L^(1/k) =  {w| w^k in L}$
+
+    Let $w$ = 在DFA裡只有經過n次循環的word
 
     then $w^k$ =只有在DFA裡經過$k dot n$次循環的word
 
@@ -88,21 +89,36 @@
 
     therefore $L^(1/k)$ is regular.
 
+
   + Is $L^(1/oo)$ regular or not?
 
-    Let $w$ =只有在DFA裡經過n次循環的word
+    $L^(1/oo) =  {w| w^k in L$ for all $k >=1} $
 
-    then $w^k$ =只有在DFA裡經過$k dot n$次循環的word, and accepted by same state
+    let a NFA is have a cycle that can be repeated infinite times
+     and $w$ is accepted by this NFA, then $w^k$ is also accepted by NFA
 
-    thus for $k >= 1$ all word can be described by same DFA
-
-    therefore $L^(1/oo)$ is regular 
+    thus $L^(1/oo)$ is regular.
 
 
   + Is $sqrt(L)$ regular of not?
+  
+    $sqrt(L) = {w^k in L $ for some $ k >=1}$
 
-  = todo
+    let a NFA is have a cycle that can be repeated infinite times
+     and $w$ is accepted by this NFA, then $w^k$ is also accepted by NFA
+
+    thus $sqrt(L)$ is regular.
+
   + What about $L^oo$?
+
+    $L^oo = union.big_(k>=1) {w^k | w in L}$
+
+    ${w^k | w in L}$   is regular by above proof.
+    
+    union have closure property,
+
+    thus $L^oo$ is regular, too.
+    
 ]
 
 #q6
