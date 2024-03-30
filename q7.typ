@@ -49,7 +49,7 @@
 
     $because p in $prime number
 
-    $therefore p-1 in.not$ prime number
+    $therefore p-1 = 2^k k>1 in.not$ prime number
 
     $therefore |x y^0 z| = |x z| = |a^i a^(p-i-1)| = |a^(p-1)| in.not$ prime number
 
@@ -58,13 +58,9 @@
     == Corollary
       $L = {a^n | n "is a prime number"}$. is not regular
   + $L = {a^m b^n | gcd(m, n) = 17}$.
-    = todo
     == Proof
     Suppose $L$ is regular. Let $p>=1$ be the pumping length given by pumping lemma.
 
-    // Consider $c, d$ such that $gcd(c, d) = 1$.
-    
-    // Consider $m, n$ such that $m = 17c, n = 17d$
 
     Consider $a^p b^n in L$. $|a^p b^n| = p+n >= p$. By the pumping lemma, there is a partition $a^p b^n = x y z$
 
