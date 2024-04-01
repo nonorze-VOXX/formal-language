@@ -72,10 +72,18 @@
 
   + What about $L^((3))$?
 
-    let new $L$ is same as $L$, but accept state connect to start state
-    then $w^3$ is also accepted by DFA
+    == Bumping lemma
+    let $w in L$
+    Suppose $L$ is regular. Let $p>=1$ be the pumping length given by pumping lemma.
 
-    therefore $L^3$ is regular.
+    Consider $w^3 in L$. $|w^3| = 3 >= p$. By the pumping lemma, there is a partition $w^p = x y z$
+
+    By lemma, $|x y| <= p$ and $|y| >= 0$, i.e.,
+    $underbrace(w^(1), "x")underbrace(w, "y")underbrace(w^(1), "z")$
+
+    $x y^0 z$ = ww is not in $L^3$
+
+    therefore $L^3$ is not regular.
 
   + Let $k in NN$. Prove that there are only finitely many languages of the form $L^((1/k))$ and that they are all regular.
 
@@ -111,13 +119,18 @@
 
   + What about $L^oo$?
 
-    $L^oo = union.big_(k>=1) {w^k | w in L}$
+    == Bumping lemma
+    let $w in L$
+    Suppose $L$ is regular. Let $p>=1$ be the pumping length given by pumping lemma.
 
-    ${w^k | w in L}$   is regular by above proof.
-    
-    union have closure property,
+    Consider $w^p in L$. $|w^p| = p >= p$. By the pumping lemma, there is a partition $w^p = x y z$
 
-    thus $L^oo$ is regular, too.
+    By lemma, $|x y| <= p$ and $|y| >= 0$, i.e.,
+    $underbrace(w^(i), "x")underbrace(w, "y")underbrace(w^(p-1-i), "z")$
+
+    $x y^0 z$ = ww is not in $L^p$
+
+    therefore $L^p$ is not regular.
     
 ]
 

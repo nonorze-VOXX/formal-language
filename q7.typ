@@ -45,7 +45,7 @@
     Consider $a^p in L$. $|a^p| = p >= p$. By the pumping lemma, there is a partition $a^p = x y z$
 
     By lemma, $|x y| <= p$ and $|y| >= 0$, i.e.,
-    $underbrace(a^i, "x")underbrace(a, "y")underbrace(b^(p-i-1), "z")$
+    $underbrace(a^i, "x")underbrace(a, "y")underbrace(a^(p-i-1), "z")$
 
     $because p in $prime number
 

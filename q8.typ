@@ -7,18 +7,22 @@
 
   + Prove by induction on $i$ that $Q^i_r$ is the set of all reachable states from $q_0$ using paths of length $i$.
 
-    $Q_r^1 $ = all q from $q_0$ can reach by 1 step
+      $i =0$ , the only reachable is $q_0$ is 0 step from $q_0$
 
-    $Q_r^2 $ = all q from $Q_r_1$ can reach by 1 step
-    ,thus $Q_r^2$ = all q from $q_0$ can reach by 2 steps
+      $Q_r^1 $ = all q from $q_0$ can reach by 1 step
 
-    let $Q_r^(i+1)$ = all q from $q_r^i$ can reach by 1 steps
-    ,thus $Q_r^(i+1)$ = all q from $q_0$ can reach by i+1 steps
+      $Q_r^2 $ = all q from $Q_r_1$ can reach by 1 step
 
-    therefore $Q_r^i$ is the set of all reachable states 
-    from $q_0$ using paths of length $i$.
+      ,thus $Q_r^2$ = all q from $q_0$ can reach by 2 steps
 
-    Q.E.D
+      let $Q_r^(i+1)$ = all q from $q_r^i$ can reach by 1 steps
+
+      ,thus $Q_r^(i+1)$ = all q from $q_0$ can reach by i+1 steps
+
+      therefore $Q_r^i$ is the set of all reachable states 
+      from $q_0$ using paths of length $i$.
+
+      Q.E.D
 
   + Give an example of a `DFA` such that $Q^(i+1)_r != Q^i_r "for all" i >= 0$.
 
@@ -28,8 +32,8 @@
         q1: $ q_1 $,
       ),
       (
-        q0: (q1: "0,1"),
-        q1: (q0: "0,1"),
+        q0: (q1: "0"),
+        q1: (q0: "0"),
       ),
     )
 

@@ -11,7 +11,7 @@
     and no pass other accept state before reach the final state.
 
     That is, MIN(L) is a DFA that is the same as M, 
-    except that the every accept states is final state.
+    except that the every accept states can't go other state
 
     So, MIN(L) is regular.
 
