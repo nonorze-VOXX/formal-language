@@ -128,7 +128,7 @@
     By lemma, $|x y| <= p$ and $|y| >= 0$, i.e.,
     $underbrace(w^(i), "x")underbrace(w, "y")underbrace(w^(p-1-i), "z")$
 
-    $x y^0 z$ = ww is not in $L^p$
+    $x y^0 z = w^i w^(p-i-1)$ is not in $L^p$
 
     therefore $L^p$ is not regular.
     
